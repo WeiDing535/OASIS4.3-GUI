@@ -12,7 +12,6 @@ Checked on 2026-10-17 on Intel macOS with Python 3.12.
 | Wheel and source distribution metadata (`twine check`) | Passed |
 | `CITATION.cff` schema 1.2.0 validation | Passed |
 | Public-tree audit | Passed; no MTZ/PDB/mmCIF/NPZ target data or personal absolute paths |
-
-The GitHub Actions workflow covers Linux, Windows, Intel macOS and Apple Silicon macOS. Those remote jobs have not run before the repository's first GitHub push, so their configured presence is not presented as a cross-platform pass.
+| GitHub Actions: Ubuntu, Windows, Intel macOS, Apple Silicon macOS | Passed ([run 39048389968](https://github.com/WeiDing535/OASIS4.3-GUI/actions/runs/39048389968)) |
 
 The private 100-case benchmark is intentionally absent from this public repository. Historical aggregate benchmark observations are development evidence, not a blind external validation claim for this release.
