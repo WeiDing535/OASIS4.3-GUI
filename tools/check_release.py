@@ -8,7 +8,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 SKIP = {".git", ".pytest_cache", "__pycache__", "build", "dist", "release_checks"}
-REQUIRED = ["README.md", "LICENSE", "CITATION.cff", "AUTHORS.md", "SECURITY.md",
+REQUIRED = ["README.md", "README_EN.md", "LICENSE", "CITATION.cff", "AUTHORS.md", "SECURITY.md",
             "CONTRIBUTING.md", "CHANGELOG.md", "environment.yml", "pyproject.toml"]
 FORBIDDEN_SUFFIXES = {".mtz", ".pdb", ".cif", ".mmcif", ".npz"}
 PRIVATE_PATTERNS = [r"/Volumes/", r"/Users/", r"[A-Za-z]:\\Users\\"]

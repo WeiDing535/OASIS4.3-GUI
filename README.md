@@ -1,5 +1,7 @@
 # OASIS4.3-GUI-0.1
 
+[English](README_EN.md) | 中文
+
 项目主页：[github.com/WeiDing535/OASIS4.3-GUI](https://github.com/WeiDing535/OASIS4.3-GUI)
 
 OASIS4.3-GUI-0.1 是面向蛋白质 X 射线 SAD 相位计算的独立研究软件。它把 OASIS/P+ 方法的现代化 Python 实现、连续 SAD 相位似然和不依赖外部 Parrot 的密度修饰放在同一套命令行和桌面界面中。程序读取实验 MTZ、蛋白质序列与重原子坐标，自动估算 ASU 组成和溶剂含量，输出含 PHIB、FOM 与 Hendrickson–Lattman 系数的 MTZ。
@@ -60,7 +62,7 @@ python -m pip install -e '.[test,gui]' -c constraints.txt
 pytest -m 'not reference_data'
 ```
 
-已配置 Linux、Windows、Intel macOS 和 Apple Silicon macOS 的 GitHub Actions。首次上传后仍需观察远程 CI 结果；本地通过不等同于所有平台均已验证。真实参考数据集成测试需先运行 `oasis-py reference-fetch`，再显式执行 `pytest -m reference_data`。
+Linux、Windows、Intel macOS 和 Apple Silicon macOS 的 GitHub Actions 已全部通过，详见[发布检查记录](docs/RELEASE_CHECKS.md)。真实参考数据集成测试需先运行 `oasis-py reference-fetch`，再显式执行 `pytest -m reference_data`。
 
 ## 引用与方法来源
 

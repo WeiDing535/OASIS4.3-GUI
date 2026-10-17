@@ -1,4 +1,4 @@
-include README.md LICENSE AUTHORS.md CHANGELOG.md CITATION.cff CONTRIBUTING.md SECURITY.md
+include README.md README_EN.md LICENSE AUTHORS.md CHANGELOG.md CITATION.cff CONTRIBUTING.md SECURITY.md
 include constraints.txt environment.yml install.py
 recursive-include docs *.md
 recursive-include src/oasis_py/resources *.json *.md *.txt *.gz
