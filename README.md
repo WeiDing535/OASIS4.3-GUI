@@ -4,7 +4,7 @@
 
 OASIS4.3-GUI-0.1 是面向蛋白质 X 射线 SAD 相位计算的独立研究软件。它把 OASIS/P+ 方法的现代化 Python 实现、连续 SAD 相位似然和不依赖外部 Parrot 的密度修饰放在同一套命令行和桌面界面中。程序读取实验 MTZ、蛋白质序列与重原子坐标，自动估算 ASU 组成和溶剂含量，输出含 PHIB、FOM 与 Hendrickson–Lattman 系数的 MTZ。
 
-本项目由丁玮（DingWei）维护，采用 LGPL-2.1-or-later。它是独立研究实现，不是中国科学院物理研究所、CCP4、Parrot 或原 OASIS 团队的官方发行版。算法仍处于科研验证阶段；FOM 是模型置信度，不能单独证明结构已解出。
+本项目由中国科学院物理研究所丁玮（DingWei）维护，采用 LGPL-2.1-or-later。算法仍处于科研验证阶段；FOM 是模型置信度，不能单独证明结构已解出。
 
 ## 一键安装
 
