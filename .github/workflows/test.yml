@@ -1,0 +1,51 @@
+name: test
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-15-intel, macos-15]
+    runs-on: ${{ matrix.os }}
+    env:
+      QT_QPA_PLATFORM: offscreen
+      QT_OPENGL: software
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install
+        run: python -m pip install -e ".[test,gui]" -c constraints.txt
+      - name: Offline tests
+        run: python -m pytest -m "not reference_data"
+      - name: Installed entry points
+        run: |
+          oasis-py --version
+          python tools/smoke_gui.py
+
+  package:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: python -m pip install build twine
+      - run: python tools/check_release.py
+      - run: python -m build
+      - run: python -m twine check dist/*
+      - run: python -m pip install --force-reinstall "$(find dist -name '*.whl' -print -quit)[gui]" -c constraints.txt
+      - run: oasis-py --version

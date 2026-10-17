@@ -1,0 +1,7 @@
+include README.md LICENSE AUTHORS.md CHANGELOG.md CITATION.cff CONTRIBUTING.md SECURITY.md
+include constraints.txt environment.yml install.py
+recursive-include docs *.md
+recursive-include src/oasis_py/resources *.json *.md *.txt *.gz
+recursive-include tests *.py *.json
+prune release_checks
+global-exclude *.mtz *.pdb *.cif *.mmcif *.npz *.py[cod]

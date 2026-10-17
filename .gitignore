@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+.venv/
+venv/
+build/
+dist/
+*.egg-info/
+release_checks/*.log
+*.mtz
+*.pdb
+*.cif
+*.mmcif
+*.npz
+*.run.log
+.DS_Store
