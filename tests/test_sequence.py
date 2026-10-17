@@ -9,7 +9,7 @@ from test_desktop import job
 
 
 def write_seq(tmp_path,text):
-    path=tmp_path/'protein.fasta';path.write_text(text);return path
+    path=tmp_path/'protein.fasta';path.write_text(text,encoding='utf-8');return path
 
 
 def test_peptide_bonds_termini_and_mass_agree_with_gemmi(tmp_path):
