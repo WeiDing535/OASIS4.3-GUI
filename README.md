@@ -20,7 +20,7 @@ Windows 可使用：
 py -3.12 install.py
 ```
 
-安装器会在用户目录创建隔离环境、安装 GUI 依赖，并从固定的 HTTPS 地址下载一次经过 SHA-256 校验的通用参考 MTZ。运行时不调用 CCP4 或 Parrot。若需要离线安装，可先取得文档所列的原始 1TQW 参考文件，然后运行：
+安装器会在用户目录创建隔离环境、安装 GUI 依赖，并从固定的 HTTPS 地址下载一次经过 SHA-256 校验的通用参考 MTZ。若需要离线安装，可先取得文档所列的原始 1TQW 参考文件，然后运行：
 
 ```bash
 python3.12 install.py --reference-source /path/to/reference-1tqw.mtz
